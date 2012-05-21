@@ -1,0 +1,167 @@
+/*
+	Theme Name: Infimum
+	Theme URI: http://www.acroyear2.org/infimum/
+	Description: A very minimal theme, widget-ready, gravatar-supporting, and standards-compliant. Black on white with blue highlights, two columns with a thin right sidebar. Possibly the minimalest of minimalist themes.
+	Version: 1.3.2
+	Author: Alex Smith
+	Author URI: http://www.acroyear2.org/
+	Tags: black, blue, white, two-columns, fixed-width
+*/
+
+/* Todo list:
+   * Have a better content title for time-based archives.
+   * Put the page number of paged archives in the content title.
+   * Make colors user-editable.
+*/
+
+/* Changelog:
+  1.3.2: Bugfix. Added min-width fix for short descriptions, corrected incomplete opening php tag in index.php, added explicit no-border-on-linked images CSS property.
+ 	1.3.1: Bugfix. Fixed clipping title problem in IE7 and some ugly text if comments were closed for a post. Released 2008/08/11.
+	1.3: Added real blog tagline support (previous was fake): if you have a tagline it displays it prominently, if you have no tagline it looks exactly like it did before. Made list-of-posts pages better. Removed an ugly line that happened sometimes in the comments. Bumped version number because of requirement in WordPress Theme Directory. Released 2008/07/31.
+	1.1: Added categories, multipule authors, blog tagline, and gravatar support. Made compatible with WordPress Theme Directory. Changed version numbering scheme. Released 2008/07/29.
+	1.02: Compatibility updates. Released 2008/07/21.
+	1.01: Fixed comment date bug. Released 2008/07/01.
+	1.0: Initial release. Released 2008/03/23.
+*/
+
+/* whole page */
+body {
+	margin: 0em;
+	padding: 0em;
+
+	color: black;
+	background: white;
+	
+	font-family: 'Droid Sans', sans-serif;	
+	/*font-family: "Lucida Grande", "Lucida Sans", "Lucida", sans-serif;*/
+	font-size: 0.75em;
+	
+	line-height: 1.5em;
+}
+
+#page {
+	margin: 8em auto;
+	padding: 0em;
+	
+	width: 60em;
+}
+
+a {
+	color: #1070c0;
+	background: inherit;
+	
+	text-decoration: none;
+}
+
+a:visited {
+	color: #0060b0;
+	background: inherit;
+}
+
+a:hover {
+	color: white;
+	background: #1070c0;
+}
+
+a img {
+	border: 0px none;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+blockquote {
+	margin: 1em 3em 1em 3em;
+	padding-left: 1em;
+	border-left: 0.3em solid #ccc;
+	background-color: #faebbc;
+	font-size: 0.9em;
+}
+/* end whole page */
+
+/* header */
+#header {
+	margin: 0em;
+	border: 0px solid gray;
+	padding: 0em;
+	
+	width: 60em;
+}
+
+#header h1 {
+	margin: 0em;
+	border: 0px solid gray;
+	padding: 0em;
+	
+	font-size: 6em;
+	line-height: 0.75em; /* weird IE7 bug fix */
+
+	float: left;
+
+	min-width: 6em;
+}
+
+#header #tagline {
+	margin: 0.75em 0em 0em 2em; /* also part of the IE7 fix */
+	border: 0px solid gray;
+	border-left: 1px solid gray;
+	padding: 0.5em 0em 0.5em 2em;
+	
+	color: gray;
+	background: inherit;
+	
+	float: left;
+}
+/* end header */
+
+/* content area */
+#content {
+	margin: 4em 0em;
+	padding: 0em;
+	width: 40em;
+
+	float: left;
+	font-size: 1em;
+	
+}
+
+
+#content .post {
+	
+	margin: 2em 0em 0em;
+	
+}
+
+#content .entry {
+	font-family: 'Droid Serif', serif;	
+}
+
+/* end content area */
+/*
+#pic {
+	float:left;
+}
+*/
+/* footer */
+#footer {
+	margin: 0em;
+	padding: 0em;
+	
+	width: 60em;
+	clear: both;
+}
+
+#footer p {
+	margin: 0em;
+	padding: 0em;
+	
+	font-size: 0.8em;
+	
+	text-align: center;
+}
+/* end footer */
