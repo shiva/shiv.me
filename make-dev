@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd stage
+stasis -p ../public -d 3000

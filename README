@@ -1,5 +1,9 @@
-Run the following command to generate html
-# stasis -p ../public
+
+To generate html:
+# ./make-site
+
+Dev mode:
+# ./make-dev
 
 Install the following:
 
