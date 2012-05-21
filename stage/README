@@ -5,3 +5,9 @@ Install the following:
 
 sudo su
 gem install stasis haml sass
+
+
+TODO
+-----
+ - convert project directories to haml
+ - find a way to embed photos (flickr/500px)
