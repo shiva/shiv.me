@@ -126,19 +126,12 @@ blockquote {
 	width: 40em;
 
 	float: left;
-	font-size: 1em;
+	font-size: 1.2em;
 	
 }
 
-
-#content .post {
-	
-	margin: 2em 0em 0em;
-	
-}
-
-#content .entry {
-	font-family: 'Droid Serif', serif;	
+#bio {
+	margin-top: 4em;
 }
 
 /* end content area */
