@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/shivanand
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://shiv.me
+  * I am shivanand (https://keybase.io/shivanand) on keybase.
+  * I have a public key ASBoHW8IILoVb7W-xD4LBj60cDtga-A8P0v6bErCa_gIWQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012077e04da51a3d8738591e96d32d8cb5ae01b3f4dd11ed6f8b05f7e99bfb0877b70a",
+      "host": "keybase.io",
+      "kid": "0120681d6f0820ba156fb5bec43e0b063eb4703b606be03c3f4bfa6c4ac26bf808590a",
+      "uid": "7e63ced535c1e0e7e4876108c97b9419",
+      "username": "shivanand"
+    },
+    "merkle_root": {
+      "ctime": 1510305148,
+      "hash": "f286d05055a4cfeab6739b13aa03993a27ae21b098a9f2d70e924f3bf759d47308c620745a71501331f94de5ee0012fd65e9b05082f5d034f3aee35c1a583238",
+      "hash_meta": "89f91564b13cfe54a2dba520c2f6a9d6ecdb9896d7cc28e1735cd2f0de2fa5b5",
+      "seqno": 1688992
+    },
+    "service": {
+      "hostname": "shiv.me",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.34"
+  },
+  "ctime": 1510305192,
+  "expire_in": 504576000,
+  "prev": "98758e4c44dd2fffb08296374b71cd793f229fd7c9bd0451b7428eb9056a5198",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgaB1vCCC6FW+1vsQ+CwY+tHA7YGvgPD9L+mxKwmv4CFkKp3BheWxvYWTFA0B7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNzdlMDRkYTUxYTNkODczODU5MWU5NmQzMmQ4Y2I1YWUwMWIzZjRkZDExZWQ2ZjhiMDVmN2U5OWJmYjA4NzdiNzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNjgxZDZmMDgyMGJhMTU2ZmI1YmVjNDNlMGIwNjNlYjQ3MDNiNjA2YmUwM2MzZjRiZmE2YzRhYzI2YmY4MDg1OTBhIiwidWlkIjoiN2U2M2NlZDUzNWMxZTBlN2U0ODc2MTA4Yzk3Yjk0MTkiLCJ1c2VybmFtZSI6InNoaXZhbmFuZCJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxMDMwNTE0OCwiaGFzaCI6ImYyODZkMDUwNTVhNGNmZWFiNjczOWIxM2FhMDM5OTNhMjdhZTIxYjA5OGE5ZjJkNzBlOTI0ZjNiZjc1OWQ0NzMwOGM2MjA3NDVhNzE1MDEzMzFmOTRkZTVlZTAwMTJmZDY1ZTliMDUwODJmNWQwMzRmM2FlZTM1YzFhNTgzMjM4IiwiaGFzaF9tZXRhIjoiODlmOTE1NjRiMTNjZmU1NGEyZGJhNTIwYzJmNmE5ZDZlY2RiOTg5NmQ3Y2MyOGUxNzM1Y2QyZjBkZTJmYTViNSIsInNlcW5vIjoxNjg4OTkyfSwic2VydmljZSI6eyJob3N0bmFtZSI6InNoaXYubWUiLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjM0In0sImN0aW1lIjoxNTEwMzA1MTkyLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6Ijk4NzU4ZTRjNDRkZDJmZmZiMDgyOTYzNzRiNzFjZDc5M2YyMjlmZDdjOWJkMDQ1MWI3NDI4ZWI5MDU2YTUxOTgiLCJzZXFubyI6MTYsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAHIqi8zg/87tfElwHW1MFa/ohhblShHegZ30ZpAoe4CQFepn7xDC5PlCWKuFrDo18IJuQlTmrjuZbtmSsHQZsC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOoK+vDS5WbgaPvOpjU6Zm2gSBPuIFZzIHaRMK+0aac/o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/shivanand
+
+==================================================================
