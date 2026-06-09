@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Shivanand Velmurugan — I make software.</title>
+<meta name="description" content="Shiva. Product leader at Microsoft Fabric. Founder of FriedSilicon. Vancouver, BC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Hanken Grotesk',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;
+    --bg:#f6f2ea;--fg:#5c5347;--emph:#211d18;--mut:#8a8275;--accent:#8a6d3f;--rule:#e5ddcf;--mk:#211d18;--surface:#efe7d8;--hl:#ece0c8}
+
+  /* auto dark (OS preference) */
+  @media(prefers-color-scheme:dark){
+    body:not(.light){--bg:#171a2e;--fg:#a6aac6;--emph:#edeef7;--mut:#6f7396;--accent:#9aa8ff;--rule:#2a2e49;--mk:#edeef7;--surface:#1e2238;--hl:#2b3157}
+  }
+  /* manual overrides (from toggle) */
+  body.dark{--bg:#171a2e;--fg:#a6aac6;--emph:#edeef7;--mut:#6f7396;--accent:#9aa8ff;--rule:#2a2e49;--mk:#edeef7;--surface:#1e2238;--hl:#2b3157}
+  body.light{--bg:#f6f2ea;--fg:#5c5347;--emph:#211d18;--mut:#8a8275;--accent:#8a6d3f;--rule:#e5ddcf;--mk:#211d18;--surface:#efe7d8;--hl:#ece0c8}
+
+  .page{background:var(--bg);color:var(--fg);min-height:100vh;transition:background .3s,color .3s}
+  .wrap{max-width:720px;margin:0 auto;padding:0 28px}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:30px 0;font-family:'JetBrains Mono',monospace;font-size:12px}
+  nav .mk{color:var(--mk);font-weight:500}
+  nav .right{display:flex;align-items:center;gap:4px}
+  nav a{color:var(--mut);text-decoration:none;margin-left:18px;transition:color .15s}
+  nav a:hover{color:var(--accent)}
+  nav .links{display:none}
+  @media(min-width:620px){nav .links{display:inline}}
+  .toggle{background:none;border:1px solid var(--rule);color:var(--mut);font:inherit;font-size:14px;width:32px;height:32px;
+    border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;margin-left:14px;transition:.15s}
+  .toggle:hover{color:var(--accent);border-color:var(--accent)}
+
+  header{padding:54px 0 70px}
+  .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px}
+  h1{font-size:clamp(42px,9vw,74px);line-height:.98;letter-spacing:-.025em;color:var(--emph)}
+  h1 .dot{color:var(--accent)}
+  .lede{font-size:clamp(17px,2.3vw,20px);max-width:31em;margin-top:26px}
+  .lede b{color:var(--emph);font-weight:600}
+
+  section{padding:42px 0;border-top:1px solid var(--rule)}
+  .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+  h2{font-size:clamp(24px,4vw,30px);margin-bottom:12px;letter-spacing:-.01em;color:var(--emph)}
+  p.body{max-width:42em}
+
+  .lk{color:var(--accent);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--accent);border-radius:3px;padding:0 1px;transition:background .15s}
+  .lk:hover{background:var(--hl)}
+  .more{display:inline-block;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:12px}
+
+  .grid{display:grid;gap:12px;grid-template-columns:1fr;margin-top:6px}
+  @media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+  .card{border:1px solid var(--rule);padding:20px;text-decoration:none;display:block;transition:.2s;background:var(--surface)}
+  .card:hover{border-color:var(--accent)}
+  .card h3{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--emph);font-weight:600;margin-bottom:6px}
+  .card span{color:var(--mut);font-size:14px}
+
+  .bk{display:flex;justify-content:space-between;padding:10px 0;align-items:baseline;border-bottom:1px solid var(--rule)}
+  .bk .t{font-weight:600;color:var(--emph)} .bk .a{font-size:13px;color:var(--mut)}
+  .two{display:grid;gap:26px;grid-template-columns:1fr}
+  @media(min-width:620px){.two{grid-template-columns:1fr 1fr}}
+  .note{display:block;padding:10px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+  .note b{color:var(--emph);font-weight:600;font-size:14.5px}
+  .note span{display:block;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:11px;margin-top:2px}
+
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+  .gal .ph{aspect-ratio:1;background:var(--surface);border:1px solid var(--rule)}
+
+  .out{display:grid;grid-template-columns:1fr;gap:2px;margin-top:6px;font-family:'JetBrains Mono',monospace;font-size:14px}
+  @media(min-width:620px){.out{grid-template-columns:1fr 1fr}}
+  .out a{display:flex;justify-content:space-between;color:var(--emph);text-decoration:none;padding:12px 4px;border-bottom:1px solid var(--rule);transition:.15s}
+  .out a:hover{color:var(--accent);padding-left:10px}
+  .out a .h{color:var(--mut)}
+
+  footer{padding:46px 0 56px;border-top:1px solid var(--rule);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="wrap">
+    <nav>
+      <span class="mk">shiv.me</span>
+      <span class="right">
+        <span class="links">
+          <a href="#writing" data-track="writing">writing</a>
+          <a href="#reading" data-track="reading">reading</a>
+          <a href="#photos">photos</a>
+          <a href="#elsewhere">elsewhere</a>
+        </span>
+        <button class="toggle" id="toggle" aria-label="Toggle theme" title="Toggle light/dark">☀</button>
+      </span>
+    </nav>
+
+    <header>
+      <div class="tag">Vancouver, BC</div>
+      <h1>I make<br>software<span class="dot">.</span></h1>
+      <p class="lede"><b>Shiva.</b> Product at <a class="lk" href="https://friedsilicon.com/">Microsoft Fabric</a> — real-time data, schemas. Once built operating systems, drivers, a DSL, an in-memory database. Still do, for fun.</p>
+    </header>
+
+    <section id="reading">
+      <div class="lbl">// reading</div>
+      <h2>What I'm reading &amp; thinking about</h2>
+      <p class="body">Currently-reading pulls from Goodreads; finished books get written up.</p>
+      <div class="two" style="margin-top:18px">
+        <div>
+          <div class="lbl" style="margin-bottom:12px">Currently reading</div>
+          <div id="goodreads">
+            <div class="bk"><span class="t">Cryptonomicon</span><span class="a">Stephenson</span></div>
+            <div class="bk"><span class="t">Designing Data-Intensive Applications</span><span class="a">Kleppmann</span></div>
+            <div class="bk"><span class="t">How Life Imitates Chess</span><span class="a">Kasparov</span></div>
+          </div>
+          <a class="lk more" href="https://www.goodreads.com/" data-track="reading">All on Goodreads →</a>
+        </div>
+        <div>
+          <div class="lbl" style="margin-bottom:12px">Recently finished — notes</div>
+          <div id="booknotes">
+            <a class="note" href="https://blog.shiv.me/" data-track="reading"><b>The Last 10 Feet</b><span>Feb 2026 · blog.shiv.me</span></a>
+            <a class="note" href="https://blog.shiv.me/" data-track="reading"><b>The undone made possible</b><span>2025 · blog.shiv.me</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="writing">
+      <div class="lbl">// writing</div>
+      <h2>Reflections — an often-neglected blog</h2>
+      <p class="body">Links I don't want to forget, and thoughts I'm compelled to pen down. Mirrored to Substack.</p>
+      <div class="out">
+        <a href="https://blog.shiv.me/" data-track="writing">blog.shiv.me <span class="h">→</span></a>
+        <a href="https://open.substack.com/pub/shivan" data-track="writing">substack / shivan <span class="h">→</span></a>
+      </div>
+    </section>
+
+    <section id="building">
+      <div class="lbl">// building · friedsilicon</div>
+      <h2>Things I'm making</h2>
+      <div class="grid">
+        <a class="card" href="https://friedsilicon.com/"><h3>SilicaDB</h3><span>Local-first data engine.</span></a>
+        <div class="card"><h3>SODL</h3><span>A DSL for data + schema.</span></div>
+        <div class="card"><h3>fdb</h3><span>In-memory database.</span></div>
+        <div class="card"><h3>ActivityLog</h3><span>iOS day-logging app.</span></div>
+      </div>
+    </section>
+
+    <section id="photos">
+      <div class="lbl">// photos</div>
+      <h2>Through the viewfinder</h2>
+      <p class="body">Gallery coming; archive lives on Flickr for now.</p>
+      <div class="gal"><div class="ph"></div><div class="ph"></div><div class="ph"></div><div class="ph"></div></div>
+      <div class="out"><a href="https://www.flickr.com/people/shvelmur">Flickr <span class="h">shvelmur →</span></a></div>
+    </section>
+
+    <section id="elsewhere">
+      <div class="lbl">// elsewhere</div>
+      <h2>Find me</h2>
+      <div class="out">
+        <a href="https://x.com/shiva">X <span class="h">@shiva</span></a>
+        <a href="https://github.com/shiva">GitHub <span class="h">@shiva</span></a>
+        <a href="https://www.linkedin.com/in/vshivanand">LinkedIn <span class="h">vshivanand</span></a>
+        <a href="http://shiv.me/cv/">Résumé <span class="h">shiv.me/cv</span></a>
+      </div>
+    </section>
+
+    <footer><span>© Shivanand Velmurugan</span><span>Vancouver, BC · built on fried silicon</span></footer>
+  </div>
+</div>
+<script>
+/* ===== THEME: auto (prefers-color-scheme) + manual toggle ===== */
+const btn=document.getElementById('toggle');
+const states=['auto','dark','light']; let mode='auto';
+function isDark(){
+  if(mode==='dark') return true;
+  if(mode==='light') return false;
+  return window.matchMedia('(prefers-color-scheme:dark)').matches;
+}
+function render(){
+  document.body.classList.remove('dark','light');
+  if(mode!=='auto') document.body.classList.add(mode);
+  btn.textContent=isDark()?'☾':'☀';
+  btn.title=mode==='auto'?'Theme: auto ('+( isDark()?'dark':'light' )+')':'Theme: '+mode;
+}
+try{ const s=localStorage.getItem('theme'); if(s&&states.includes(s)) mode=s; }catch(e){}
+render();
+btn.addEventListener('click',()=>{
+  mode=states[(states.indexOf(mode)+1)%states.length];
+  try{localStorage.setItem('theme',mode);}catch(e){}
+  render();
+});
+window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',render);
+
+/* ===== TRACKING: writing/reading clicks ===== */
+function track(name,props={}){
+  const p={...props, ts:Date.now()};
+  try{ if(window.gtag) gtag('event',name,p);
+       if(window.plausible) plausible(name,{props:p});
+       (window.dataLayer=window.dataLayer||[]).push({event:name,...p}); }catch(e){}
+  console.log('[track]',name,p);
+}
+document.addEventListener('click',e=>{
+  const a=e.target.closest('[data-track]');
+  if(a) track('section_click',{section:a.dataset.track, href:a.getAttribute('href')});
+});
+
+/* ===== GOODREADS LIVE FEED (fill GOODREADS_RSS to activate) ===== */
+const PROXY="https://api.allorigins.win/raw?url=", GOODREADS_RSS="";
+(async()=>{ if(!GOODREADS_RSS) return; try{
+  const r=await fetch(PROXY+encodeURIComponent(GOODREADS_RSS));
+  const items=[...new DOMParser().parseFromString(await r.text(),"text/xml").querySelectorAll("item")].slice(0,5);
+  if(!items.length) return;
+  document.getElementById('goodreads').innerHTML=items.map(x=>
+    `<div class="bk"><span class="t">${x.querySelector('title')?.textContent||''}</span><span class="a">${x.getElementsByTagName('author_name')[0]?.textContent||''}</span></div>`
+  ).join('');
+}catch(e){} })();
+</script>
+</body>
+</html>

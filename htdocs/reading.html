@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Reading — Shiva</title>
+<meta name="description" content="What Shivanand Velmurugan is reading.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="page">
+  <div class="wrap">
+    <nav>
+      <a href="/" class="mk">shiv.me</a>
+      <span class="right">
+        <span class="links">
+          <a href="/writing.html">writing</a>
+          <a href="/building.html">building</a>
+          <a href="/photos.html">photos</a>
+          <a href="/reading.html" class="active">reading</a>
+        </span>
+        <button class="toggle" id="toggle" aria-label="Toggle theme">☀</button>
+      </span>
+    </nav>
+
+    <div class="page-hero">
+      <div class="tag">// reading</div>
+      <h1>What I'm reading<br>&amp; thinking about<span class="dot">.</span></h1>
+      <p class="lede">Currently-reading pulls from Goodreads. Finished books sometimes get written up.</p>
+    </div>
+
+    <section>
+      <div class="two">
+        <div>
+          <div class="lbl">Currently reading</div>
+          <div id="goodreads">
+            <div class="bk"><span class="t">Cryptonomicon</span><span class="a">Stephenson</span></div>
+            <div class="bk"><span class="t">Designing Data-Intensive Applications</span><span class="a">Kleppmann</span></div>
+            <div class="bk"><span class="t">How Life Imitates Chess</span><span class="a">Kasparov</span></div>
+          </div>
+          <a class="lk more" href="https://www.goodreads.com/">All on Goodreads →</a>
+        </div>
+        <div>
+          <div class="lbl">Recently finished — notes</div>
+          <div id="booknotes">
+            <a class="note" href="https://blog.shiv.me/"><b>The Last 10 Feet</b><span>Feb 2026 · blog.shiv.me</span></a>
+            <a class="note" href="https://blog.shiv.me/"><b>The undone made possible</b><span>2025 · blog.shiv.me</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer><span>© Shivanand Velmurugan</span><span>Vancouver, BC · built on fried silicon</span></footer>
+  </div>
+</div>
+<script src="/site.js"></script>
+<script>
+const PROXY="https://api.allorigins.win/raw?url=", GOODREADS_RSS="";
+(async()=>{ if(!GOODREADS_RSS) return; try{
+  const r=await fetch(PROXY+encodeURIComponent(GOODREADS_RSS));
+  const items=[...new DOMParser().parseFromString(await r.text(),"text/xml").querySelectorAll("item")].slice(0,5);
+  if(!items.length) return;
+  document.getElementById('goodreads').innerHTML=items.map(x=>
+    `<div class="bk"><span class="t">${x.querySelector('title')?.textContent||''}</span><span class="a">${x.getElementsByTagName('author_name')[0]?.textContent||''}</span></div>`
+  ).join('');
+}catch(e){} })();
+</script>
+</body>
+</html>
