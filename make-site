@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cd stage
-stasis -p ../public
