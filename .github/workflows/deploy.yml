@@ -24,10 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      - name: Upload site (htdocs)
+      - name: Upload site (src)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: htdocs
+          path: src
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

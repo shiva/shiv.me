@@ -1,6 +1,6 @@
 # shiv.me
 
-Personal site. Plain static HTML in `htdocs/`, served in dev by a small
+Personal site. Plain static HTML in `src/`, served in dev by a small
 Bun server (`dev.ts`) with live reload.
 
 ## Dev
@@ -11,11 +11,17 @@ Bun server (`dev.ts`) with live reload.
 
 ## Layout
 
-- `htdocs/`        — the site. Everything here is served as-is.
-- `htdocs/cv/`     — résumé / CV.
-- `dev.ts`         — dev server + live reload.
+- `src/`            — web root; everything here is served as-is.
+  - `src/css/`      — stylesheets (`style.css`)
+  - `src/js/`       — scripts (`site.js`)
+  - `src/cv/`       — résumé / CV
+  - `src/projects/` — project pages
+  - `CNAME`, `.nojekyll` — GitHub Pages custom domain + Jekyll opt-out
+- `dev.ts`          — dev server + live reload
+- `Makefile`        — `make dev | build | check | deploy | clean`
+- `.github/workflows/deploy.yml` — publishes `src/` to GitHub Pages on push to `master`
 
 ## Notes
 
-- No build step. Edit files in `htdocs/` and refresh.
+- No build step. Edit files in `src/` and refresh.
 - The old stasis/haml generator was removed; the site is hand-written HTML/CSS now.

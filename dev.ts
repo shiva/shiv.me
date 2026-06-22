@@ -20,15 +20,15 @@ Bun.serve({
     }
 
     let path = url.pathname === "/" ? "/index.html" : url.pathname;
-    let file = Bun.file(`htdocs${path}`);
+    let file = Bun.file(`src${path}`);
     if (!(await file.exists())) {
       // try "<path>.html", then directory index "<path>/index.html"
       const htmlExt = path + ".html";
       const dirIndex = (path.endsWith("/") ? path : path + "/") + "index.html";
-      if (await Bun.file(`htdocs${htmlExt}`).exists()) path = htmlExt;
-      else if (await Bun.file(`htdocs${dirIndex}`).exists()) path = dirIndex;
+      if (await Bun.file(`src${htmlExt}`).exists()) path = htmlExt;
+      else if (await Bun.file(`src${dirIndex}`).exists()) path = dirIndex;
       else return new Response("Not found", { status: 404 });
-      file = Bun.file(`htdocs${path}`);
+      file = Bun.file(`src${path}`);
     }
 
     let body = await file.text();
@@ -39,7 +39,7 @@ Bun.serve({
   },
 });
 
-watch("htdocs", { recursive: true }, () => {
+watch("src", { recursive: true }, () => {
   for (const c of clients) {
     try { c.enqueue(`data: reload\n\n`); }
     catch { clients.delete(c); } // drop closed/stale controllers

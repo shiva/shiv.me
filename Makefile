@@ -1,6 +1,6 @@
-# shiv.me — static site in htdocs/, deployed to GitHub Pages via Actions.
+# shiv.me — static site in src/, deployed to GitHub Pages via Actions.
 
-SITE := htdocs
+SITE := src
 OUT  := _site
 
 .PHONY: dev build check clean deploy help
@@ -15,7 +15,7 @@ help:
 dev:
 	bun run dev.ts
 
-# Mirror htdocs/ into _site/ — same tree GitHub Pages publishes.
+# Mirror src/ into _site/ — same tree GitHub Pages publishes.
 build: clean check
 	@mkdir -p $(OUT)
 	@cp -R $(SITE)/. $(OUT)/
@@ -28,7 +28,7 @@ check:
 	@! grep -rl "index.redesign" $(SITE) >/dev/null 2>&1 || (echo "stale index.redesign refs" && exit 1)
 	@echo "checks passed"
 
-# Deployment is automatic: the Pages Action publishes htdocs/ on push to master.
+# Deployment is automatic: the Pages Action publishes src/ on push to master.
 deploy:
 	git push origin master
 
