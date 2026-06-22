@@ -4,6 +4,7 @@ const clients = new Set<ReadableStreamDefaultController>();
 
 Bun.serve({
   port: 3000,
+  idleTimeout: 255, // keep the live-reload SSE stream open (max allowed)
   async fetch(req) {
     const url = new URL(req.url);
 
@@ -39,7 +40,10 @@ Bun.serve({
 });
 
 watch("htdocs", { recursive: true }, () => {
-  for (const c of clients) c.enqueue(`data: reload\n\n`);
+  for (const c of clients) {
+    try { c.enqueue(`data: reload\n\n`); }
+    catch { clients.delete(c); } // drop closed/stale controllers
+  }
 });
 
 console.log("http://localhost:3000");

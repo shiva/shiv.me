@@ -11,7 +11,7 @@ const h1=document.getElementById('h1'), tag=document.getElementById('tag'), flip
 let mode='product';
 const COPY={
   product:{tag:'Vancouver, BC · Microsoft', h1:'I ship products<br>at scale<span class="dot">.</span>', flip:'flip the switch ▸ see the code'},
-  hacker :{tag:'~/shiva · while(awake){ build(); }', h1:'I build things<br>for the love of it<span class="dot">_</span>', flip:'◂ flip back ▸ the product side'}
+  hacker :{tag:'~/shiva · while(alive){ build(); }', h1:'I build things<br>that must exist<span class="dot">_</span>', flip:'◂ flip back ▸ the product side'}
 };
 const reduceMotion=matchMedia('(prefers-reduced-motion:reduce)').matches;
 let typer;
