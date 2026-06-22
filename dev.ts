@@ -21,9 +21,13 @@ Bun.serve({
     let path = url.pathname === "/" ? "/index.html" : url.pathname;
     let file = Bun.file(`htdocs${path}`);
     if (!(await file.exists())) {
-      file = Bun.file(`htdocs${path}.html`);
-      if (await file.exists()) path = path + ".html";
+      // try "<path>.html", then directory index "<path>/index.html"
+      const htmlExt = path + ".html";
+      const dirIndex = (path.endsWith("/") ? path : path + "/") + "index.html";
+      if (await Bun.file(`htdocs${htmlExt}`).exists()) path = htmlExt;
+      else if (await Bun.file(`htdocs${dirIndex}`).exists()) path = dirIndex;
       else return new Response("Not found", { status: 404 });
+      file = Bun.file(`htdocs${path}`);
     }
 
     let body = await file.text();
