@@ -1,27 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>shiv.me</title>
-<!--[if IE]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<style>
-  article, aside, details, figcaption, figure, footer, header,
-  hgroup, menu, nav, section { display: block; }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<title>Projects — Shivanand Velmurugan</title>
+<meta name="description" content="Projects by Shiva — photography (People of GVRD, Neon) and code.">
+<link rel="canonical" href="https://shiv.me/projects/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<p>
-<h1><a href="/">Home</a>
-<a href="/projects">Projects</a></h1>
-</p>
-<p>
-<h3>Photography</h3>
-<a href="/projects/people-of-gvrd">People of GVRD</a>
-<a href="/projects/neon">Neon</a>
-<h3>Programming</h3>
-<a href="https://github.com/shiva">Github repos</a>
-</p>
+<div class="page">
+  <div class="wrap">
+    <nav>
+      <a href="/" class="mk">shiv.me</a>
+      <span class="right">
+        <span class="links">
+          <a class="lnk" href="/writing.html">writing</a>
+          <a class="lnk" href="/building.html">building</a>
+          <a class="lnk" href="/photos.html">photos</a>
+          <a class="lnk" href="/reading.html">reading</a>
+        </span>
+        <button class="toggle" id="toggle" aria-label="Toggle theme">☀</button>
+      </span>
+    </nav>
+
+    <header class="sub-hero">
+      <div class="tag">// projects</div>
+      <h1>Projects<span class="dot">.</span></h1>
+      <p class="soon">Photography projects and code. The camera ones live on Flickr; the code lives on <a href="https://github.com/shiva">GitHub</a>.</p>
+    </header>
+
+    <section>
+      <div class="lbl">// photography</div>
+      <h2>Photography</h2>
+      <div class="grid">
+        <a class="card" href="/projects/people-of-gvrd/"><h3>People of GVRD</h3><p>Portraits of strangers around Greater Vancouver.</p></a>
+        <a class="card" href="/projects/neon/"><h3>Neon</h3><p>Neon signs and night light.</p></a>
+      </div>
+    </section>
+
+    <section>
+      <div class="lbl">// code</div>
+      <h2>Code</h2>
+      <p class="body">Open-source work and experiments — including <a class="lk" href="https://friedsilicon.com/">FriedSilicon</a> (fdb, sodl, silicadb). Everything is on <a class="lk" href="https://github.com/shiva">github.com/shiva</a>.</p>
+      <a class="back" href="/">◂ back home</a>
+    </section>
+
+    <footer><span>© Shivanand Velmurugan</span><span>Vancouver, BC · built on fried silicon</span></footer>
+  </div>
+</div>
+<script src="/js/site.js"></script>
 </body>
 </html>
