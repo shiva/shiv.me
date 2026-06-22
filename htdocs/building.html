@@ -4,11 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
-<title>Building — Shiva</title>
-<meta name="description" content="Things Shivanand Velmurugan is building.">
+<meta name="robots" content="noindex">
+<title>Building — Shivanand Velmurugan</title>
+<meta name="description" content="What Shiva is building — FriedSilicon projects: fdb, sodl, silicadb.">
+<link rel="canonical" href="https://shiv.me/building.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -18,47 +21,21 @@
       <a href="/" class="mk">shiv.me</a>
       <span class="right">
         <span class="links">
-          <a href="/writing.html">writing</a>
-          <a href="/building.html" class="active">building</a>
-          <a href="/photos.html">photos</a>
-          <a href="/reading.html">reading</a>
+          <a class="lnk" href="/writing.html">writing</a>
+          <a class="lnk active" href="/building.html">building</a>
+          <a class="lnk" href="/photos.html">photos</a>
+          <a class="lnk" href="/reading.html">reading</a>
         </span>
         <button class="toggle" id="toggle" aria-label="Toggle theme">☀</button>
       </span>
     </nav>
 
-    <div class="page-hero">
-      <div class="tag">// building · friedsilicon</div>
-      <h1>Things I'm<br>making<span class="dot">.</span></h1>
-      <p class="lede">Side projects under <a class="lk" href="https://friedsilicon.com/">FriedSilicon</a>. Systems programming, language design, local-first software.</p>
-    </div>
-
-    <section>
-      <div class="lbl">// projects</div>
-      <h2>Current work</h2>
-      <div class="grid">
-        <a class="card" href="https://friedsilicon.com/">
-          <h3>SilicaDB</h3>
-          <p>Local-first data engine. Fast, embedded, schema-aware.</p>
-          <span class="status">active</span>
-        </a>
-        <div class="card">
-          <h3>SODL</h3>
-          <p>A DSL for data and schema definition. Compiles to multiple targets.</p>
-          <span class="status">active</span>
-        </div>
-        <div class="card">
-          <h3>fdb</h3>
-          <p>In-memory database. Small, embeddable, no dependencies.</p>
-          <span class="status">active</span>
-        </div>
-        <div class="card">
-          <h3>ActivityLog</h3>
-          <p>iOS day-logging app. Track what you do, simply.</p>
-          <span class="status">active</span>
-        </div>
-      </div>
-    </section>
+    <header class="sub-hero">
+      <div class="tag">// building</div>
+      <h1>Building<span class="dot">.</span></h1>
+      <p class="soon">Things I build for the love of it, at <a href="https://friedsilicon.com/">FriedSilicon</a> — an in-memory DB (<a href="https://github.com/friedsilicon/fdb">fdb</a>), a DSL (<a href="https://github.com/friedsilicon/sodl">sodl</a>), a <a href="https://friedsilicon.com/silicadb/index.html">local-first engine</a>, and a patched <a href="https://github.com/shiva/st">terminal</a>. A full project index is coming; for now, the code is on <a href="https://github.com/shiva">GitHub</a>.</p>
+      <a class="back" href="/">◂ back home</a>
+    </header>
 
     <footer><span>© Shivanand Velmurugan</span><span>Vancouver, BC · built on fried silicon</span></footer>
   </div>

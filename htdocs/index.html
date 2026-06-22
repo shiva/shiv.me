@@ -4,67 +4,143 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
-<title>Shivanand Velmurugan — I make software.</title>
-<meta name="description" content="Shiva. Product leader at Microsoft Fabric. Founder of FriedSilicon. Vancouver, BC.">
+<title>Shivanand Velmurugan — Product leader. Systems hacker.</title>
+<meta name="description" content="Shiva. Product at Microsoft, building the Schema Registry for real-time data at planetary scale. Systems hacker, founder of FriedSilicon. Vancouver, BC.">
 <link rel="canonical" href="https://shiv.me/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shiv.me/">
+<meta property="og:title" content="Shivanand Velmurugan — Product leader. Systems hacker.">
+<meta property="og:description" content="Product at Microsoft, building the Schema Registry for real-time data at planetary scale. Systems hacker, founder of FriedSilicon. Vancouver, BC.">
+<meta property="og:image" content="https://shiv.me/og.png">
+<meta property="og:image:alt" content="Shivanand Velmurugan — product leader and systems hacker.">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@shiva">
+<meta name="twitter:title" content="Shivanand Velmurugan — Product leader. Systems hacker.">
+<meta name="twitter:description" content="Product at Microsoft, building the Schema Registry for real-time data at planetary scale. Systems hacker, founder of FriedSilicon.">
+<meta name="twitter:image" content="https://shiv.me/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <div class="page">
   <div class="wrap">
+
     <nav>
       <a href="/" class="mk">shiv.me</a>
       <span class="right">
         <span class="links">
-          <a href="/writing.html">writing</a>
-          <a href="/building.html">building</a>
-          <a href="/photos.html">photos</a>
-          <a href="/reading.html">reading</a>
+          <a class="lnk" href="/writing.html">writing</a>
+          <a class="lnk" href="/building.html">building</a>
+          <a class="lnk" href="/photos.html">photos</a>
+          <a class="lnk" href="/reading.html">reading</a>
+        </span>
+        <span class="switch" id="switch" role="switch" aria-label="Switch to Hacker mode" aria-checked="false" tabindex="0">
+          <span class="prod on">Product</span><span class="hack">Hacker</span>
         </span>
         <button class="toggle" id="toggle" aria-label="Toggle theme">☀</button>
       </span>
     </nav>
 
     <header>
-      <div class="tag">Vancouver, BC</div>
-      <h1>I make<br>software<span class="dot">.</span></h1>
-      <p class="lede"><b>Shiva.</b> <a class="lk" href="https://github.com/shiva">Hacker</a> (the <a class="lk" href="http://www.catb.org/jargon/html/introduction.html">programming</a> kind). Avid <a class="lk" href="https://www.flickr.com/people/shvelmur">photographer</a>. Aspiring pianist. Moderate tennis player.</p>
+      <div class="tag" id="tag">Vancouver, BC · Microsoft</div>
+      <h1 id="h1">I ship products<br>at scale<span class="dot">.</span></h1>
+      <p class="lede m product fade">
+        <b>Shiva.</b> Product at Microsoft — building the
+        <a class="lk" href="https://learn.microsoft.com/en-us/fabric/real-time-intelligence/schema-sets/schema-registry-overview">Schema Registry</a>
+        for real-time data at planetary scale: schemas, governance, and the developer experience on top.
+        I like clear thinking, shipping often, and staying close to the code.
+      </p>
+      <p class="lede m hacker fade">
+        <b>$ whoami</b> — Shiva. I build databases and languages for fun: an
+        <a class="lk" href="https://github.com/friedsilicon/fdb">in-memory DB</a>, a
+        <a class="lk" href="https://github.com/friedsilicon/sodl">DSL</a>, a
+        <a class="lk" href="https://friedsilicon.com/silicadb/index.html">local-first engine</a>, a patched
+        <a class="lk" href="https://github.com/shiva/st">terminal</a>. Once built an OS, an in-memory database, and
+        a couple of languages &amp; compilers for a carrier-class router.
+      </p>
+      <a class="flip-cta" id="flip" role="button" tabindex="0">flip the switch ▸ see the code</a>
     </header>
 
+    <!-- IMPACT / SYSTEMS -->
     <section>
-      <div class="lbl">// work</div>
-      <h2>What I do</h2>
-      <p class="body">Product at <a class="lk" href="https://www.microsoft.com/en-us/microsoft-fabric">Microsoft Fabric</a> — real-time data, schemas, pipelines. Before that, operating systems, drivers, compilers, and SDKs for carrier-class routers. I also run <a class="lk" href="https://friedsilicon.com/">FriedSilicon</a>, where I build things for fun: a local-first data engine, a DSL, an in-memory database, an iOS app.</p>
-      <p class="body">If you want to know more, have a look at my <a class="lk" href="/cv/">résumé</a>.</p>
+      <div class="lbl m product fade">// impact</div>
+      <div class="lbl m hacker fade">// systems</div>
+
+      <div class="m product fade">
+        <h2>Track record</h2>
+        <ol class="ladder">
+          <li>
+            <div class="co">Microsoft</div>
+            <div class="ro">Product on the <a class="lk" href="https://learn.microsoft.com/en-us/fabric/real-time-intelligence/schema-sets/schema-registry-overview">Schema Registry</a> — schemas, governance &amp; the developer experience for real-time data at planetary scale.</div>
+          </li>
+          <li>
+            <div class="co">AWS — Amazon SNS &amp; SQS</div>
+            <div class="ro">Operated core messaging at scale. Grew the business <b>&gt;15x</b>; <b>300K&nbsp;→&nbsp;1M</b> weekly active accounts.</div>
+          </li>
+          <li>
+            <div class="co">GE — Predix</div>
+            <div class="ro">Shipped an ML data-ingestion product that auto-classifies arbitrary JSON/CSV sources.</div>
+          </li>
+          <li>
+            <div class="co">Ericsson</div>
+            <div class="ro">Built an OS, an in-memory database, and a couple of languages &amp; compilers for a carrier-class router.</div>
+          </li>
+        </ol>
+        <a class="cvbtn" href="/cv/">Full résumé / CV →</a>
+      </div>
+
+      <div class="m hacker fade">
+        <h2>What I build</h2>
+        <p class="body">Side work at <a class="lk" href="https://friedsilicon.com/">FriedSilicon</a> — for the love of it.</p>
+        <div class="grid">
+          <a class="card" href="https://github.com/shiva/st"><h3>st <span class="s">23★ · C</span></h3><p>suckless terminal, my patch set. Minimal, fast, mine.</p></a>
+          <a class="card" href="https://github.com/friedsilicon/sodl"><h3>sodl <span class="s">DSL</span></h3><p>Structured Object Definition Language. Grammar, types, spec.</p></a>
+          <a class="card" href="https://github.com/friedsilicon/fdb"><h3>fdb <span class="s">3★</span></h3><p>In-memory database / KV store, from scratch.</p></a>
+          <a class="card" href="https://friedsilicon.com/silicadb/index.html"><h3>silicadb <span class="s">WIP</span></h3><p>Local-first data engine. Sync, conflict, offline.</p></a>
+        </div>
+      </div>
     </section>
 
+    <!-- HOW I OPERATE / WHY I BUILD -->
     <section>
-      <div class="lbl">// too much information</div>
-      <h2>The longer version</h2>
-      <p class="body">I grew up in Pondicherry, India, studied at PEC, and eventually made my way to Vancouver, BC — where I've been for over a decade. I write code, take photographs, read a lot, and occasionally attempt to play the piano.</p>
-      <p class="body">I'm a hacker in the original sense — not <a class="lk" href="http://en.wikipedia.org/wiki/Hacker_%28programmer_subculture%29">security</a>, but the <a class="lk" href="http://www.catb.org/jargon/html/introduction.html">build-things-for-the-love-of-it</a> kind. I've shipped operating systems, databases, DSLs, iOS apps, and web infrastructure. I'm most interested in systems programming, language design, and the craft of building software that lasts.</p>
-      <p class="body">Outside of work: <a class="lk" href="https://www.flickr.com/people/shvelmur">photography</a> (film and digital), tennis, reading — especially history, science, and long-form nonfiction.</p>
+      <div class="lbl m product fade">// how i lead</div>
+      <div class="lbl m hacker fade">// why i build</div>
+      <div class="m product fade">
+        <h2>How I operate</h2>
+        <p class="body">I think product work goes better when you can read the code and the room. I aim for clarity, ship small and often, and treat technical depth as something to use rather than delegate away.</p>
+      </div>
+      <div class="m hacker fade">
+        <h2>Why I build</h2>
+        <p class="body">Systems programming, language design, the craft of software that lasts. It started for real at Ericsson — an OS, an in-memory DB, languages &amp; compilers for a carrier-class router — and never stopped. I build the hard things myself so I understand what I ask teams to ship. Hacker in the original sense: build-for-the-love-of-it, not security.</p>
+      </div>
     </section>
 
+    <!-- FIND ME (shared) -->
     <section>
       <div class="lbl">// elsewhere</div>
       <h2>Find me</h2>
       <div class="out">
-        <a href="https://x.com/shiva">X <span class="h">@shiva</span></a>
-        <a href="https://github.com/shiva">GitHub <span class="h">@shiva</span></a>
-        <a href="https://www.linkedin.com/in/vshivanand">LinkedIn <span class="h">vshivanand</span></a>
-        <a href="https://www.instagram.com/shivanand/">Instagram <span class="h">@shivanand</span></a>
-        <a rel="me noopener" href="https://mastodon.cloud/@shiv" target="_blank">Mastodon <span class="h">@shiv</span></a>
-        <a href="mailto:shiv@shiv.me">Email <span class="h">shiv@shiv.me</span></a>
+        <a rel="me" href="https://x.com/shiva">X <span class="h">@shiva</span></a>
+        <a rel="me" href="https://github.com/shiva">GitHub <span class="h">@shiva</span></a>
+        <a rel="me" href="https://www.linkedin.com/in/vshivanand">LinkedIn <span class="h">vshivanand</span></a>
+        <a rel="me" href="https://bsky.app/profile/vshivanand.bsky.social">Bluesky <span class="h">@shiv.me</span></a>
+        <a rel="me" href="https://mastodon.cloud/@shiv">Mastodon <span class="h">@shiv</span></a>
+        <a rel="me" href="https://blog.shiv.me/">Blog <span class="h">blog.shiv.me</span></a>
+        <a href="/cv/">Résumé <span class="h">/cv</span></a>
+        <a rel="me" href="https://www.flickr.com/photos/shvelmur">Flickr <span class="h">shvelmur</span></a>
+        <a rel="me" href="mailto:shiv@shiv.me">Email <span class="h">shiv@shiv.me</span></a>
       </div>
     </section>
 
     <footer><span>© Shivanand Velmurugan</span><span>Vancouver, BC · built on fried silicon</span></footer>
   </div>
 </div>
+
 <script src="/site.js"></script>
 </body>
 </html>
