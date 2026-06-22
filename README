@@ -1,17 +1,21 @@
+# shiv.me
 
-To generate html:
-# ./make-site
+Personal site. Plain static HTML in `htdocs/`, served in dev by a small
+Bun server (`dev.ts`) with live reload.
 
-Dev mode:
-# ./make-dev
+## Dev
 
-Install the following:
+    bun run dev          # http://localhost:3000
 
-sudo su
-gem install stasis haml sass
+(or `bun run dev.ts` directly)
 
+## Layout
 
-TODO
------
- - convert project directories to haml
- - find a way to embed photos (flickr/500px)
+- `htdocs/`        — the site. Everything here is served as-is.
+- `htdocs/cv/`     — résumé / CV.
+- `dev.ts`         — dev server + live reload.
+
+## Notes
+
+- No build step. Edit files in `htdocs/` and refresh.
+- The old stasis/haml generator was removed; the site is hand-written HTML/CSS now.
