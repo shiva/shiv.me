@@ -1,4 +1,4 @@
-# shiv.me
+# shiv.me -- ARCHIVED
 
 Personal site. Plain static HTML in `src/`, served in dev by a small
 Bun server (`dev.ts`) with live reload.
